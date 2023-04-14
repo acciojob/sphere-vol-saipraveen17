@@ -1,8 +1,8 @@
 function volume_sphere() {
-    //Write your code her
-	const vol = document.getElementById('volume');
-	const radius = document.getElementById('radius').value;
-	vol.value = ((4/3)*(22/7))*(Math.pow(radius, 3));
+    const radius = document.getElementById("radius").value;
+  const volume = (4/3) * Math.PI * Math.pow(radius, 3);
+  document.getElementById("volume").value = volume.toFixed(2);
 } 
-
+// const calculate = document.getElementById('submit');
+// calculate.addEventListener('click', volume_sphere);
 window.onload = document.getElementById('MyForm').onsubmit = volume_sphere;
